@@ -1,0 +1,12 @@
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.5
+jupyter>=1.0
+matplotlib>=3.8
+seaborn>=0.13
+pytest>=8.0
+black>=24.0
+flake8>=7.0
+isort>=5.13
+ruff>=0.6
+dvc>=3.0

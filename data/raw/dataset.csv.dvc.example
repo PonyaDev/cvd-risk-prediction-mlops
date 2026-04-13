@@ -1,0 +1,7 @@
+# Example only. Generate the real file with:
+# dvc add data/raw/dataset.csv
+outs:
+  - path: data/raw/dataset.csv
+    hash: md5
+    md5: <generated-by-dvc>
+    size: <generated-by-dvc>

@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE and editors
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Local notes
+local-notes/
+
+# DVC local state
+.dvc/cache/
+.dvc/tmp/
+.dvc/config.local
+
+# Local data and model artifacts
+data/raw/*
+data/interim/*
+data/processed/*
+models/*
+
+# Keep tracked placeholders and training examples
+!data/raw/.gitkeep
+!data/raw/README.md
+!data/raw/dataset.csv.dvc.example
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!models/.gitkeep
+
+# Keep DVC metadata in Git
+!*.dvc
+!.dvc/config
+!.dvc/.gitignore
+!.dvcignore
