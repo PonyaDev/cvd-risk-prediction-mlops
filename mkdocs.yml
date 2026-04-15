@@ -1,0 +1,28 @@
+site_name: cvd-risk-prediction-mlops
+site_description: Документация ML-проекта по прогнозированию риска сердечно-сосудистых осложнений
+site_url: https://ponya.dev/cvd-risk-prediction-mlops/
+repo_name: PonyaDev/cvd-risk-prediction-mlops
+repo_url: https://github.com/PonyaDev/cvd-risk-prediction-mlops
+theme:
+  name: mkdocs
+
+nav:
+  - Главная: index.md
+  - Структура проекта: project-structure.md
+  - Модули: modules.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["."]
+          options:
+            docstring_style: google
+            show_root_heading: true
+            show_source: false
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true

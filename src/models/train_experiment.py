@@ -24,6 +24,8 @@ from src.utils.mlflow_config import (
 
 @dataclass
 class ExperimentConfig:
+    """Configuration for a single MLflow-tracked training run."""
+
     data_path: str
     experiment_name: str
     max_depth: int
@@ -33,6 +35,8 @@ class ExperimentConfig:
 
 
 def parse_arguments() -> argparse.Namespace:
+    """Parse CLI arguments for the experiment runner."""
+
     parser = argparse.ArgumentParser(
         description="Tracked MLflow experiment for CVD risk prediction.",
     )
@@ -76,6 +80,14 @@ def parse_arguments() -> argparse.Namespace:
 
 
 def run_experiment(config: ExperimentConfig) -> str:
+    """Train and evaluate a cardiovascular risk model inside an MLflow run.
+
+    The function loads a processed dataset or a safe demo dataset, evaluates
+    the model with stratified cross-validation, logs hyperparameters and
+    quality metrics to MLflow, and stores key artifacts such as the confusion
+    matrix and serialized model.
+    """
+
     MLFLOW_BACKEND_DIR.mkdir(exist_ok=True)
     MLFLOW_ARTIFACTS_DIR.mkdir(exist_ok=True)
 
@@ -146,6 +158,8 @@ def run_experiment(config: ExperimentConfig) -> str:
 
 
 def main() -> int:
+    """Run the training scenario from the command line."""
+
     arguments = parse_arguments()
     config = ExperimentConfig(
         data_path=arguments.data_path,
